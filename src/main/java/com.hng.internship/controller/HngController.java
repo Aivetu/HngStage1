@@ -3,11 +3,13 @@ package com.hng.internship.controller;
 
 import com.hng.internship.model.HngDetails;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import com.hng.internship.service.HngService;
 
+@CrossOrigin(origins = "http://localhost:8080")
 @RestController
 public class HngController {
 
