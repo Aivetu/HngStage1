@@ -16,7 +16,7 @@ public class HngController {
     @Autowired
     HngService service;
 
-    @CrossOrigin(origins = "*")
+    @CrossOrigin(allowedHeaders = "*")
     @RequestMapping(method = RequestMethod.GET)
     public HngDetails getDetails(){
         return service.Details();
