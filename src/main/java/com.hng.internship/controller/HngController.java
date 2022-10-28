@@ -9,13 +9,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import com.hng.internship.service.HngService;
 
-@CrossOrigin(origins = "http://localhost:8080")
+
 @RestController
 public class HngController {
 
     @Autowired
     HngService service;
-    @RequestMapping(value = "/details",method = RequestMethod.GET)
+
+    @CrossOrigin(origins = "http://localhost:8080")
+    @RequestMapping(method = RequestMethod.GET)
     public HngDetails getDetails(){
         return service.Details();
     }
