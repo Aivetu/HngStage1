@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import com.hng.internship.service.HngService;
 
-
+@CrossOrigin(origins= {"*"}, maxAge = 4800, allowCredentials = "false" )
 @RestController
 public class HngController {
 
     @Autowired
     HngService service;
 
-    @CrossOrigin(allowedHeaders = "*")
+
     @RequestMapping(method = RequestMethod.GET)
     public HngDetails getDetails(){
         return service.Details();
